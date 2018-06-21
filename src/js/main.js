@@ -159,7 +159,8 @@
                 notification: {
                     attrsFormat: "keyValues",
                     callback: (notification) => {
-                        handlerReceiveEntities.call(this, notification.data);
+                        //handlerReceiveEntities.call(this, notification.data);
+                        doInitialQueries.call(this, id_pattern, types, filter);
                     }
                 },
                 expires: moment().add('3', 'hours').toISOString()
